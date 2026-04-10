@@ -33,6 +33,26 @@ pipeline {
         """
       }
     }
+    stage("SonarQube Analysis") {
+      environment {
+    SONAR_TOKEN = credentials('sonar-token')
+  }
+  steps {
+    withSonarQubeEnv('SonarQube') {
+      sh '''
+        echo "-------- Running SonarQube Analysis --------"
+
+        mvn sonar:sonar \
+        -Dsonar.projectKey=datastore \
+        -Dsonar.projectName=datastore \
+        -Dsonar.host.url=http://3.109.183.115:9000 \
+        -Dsonar.login=$SONAR_TOKEN
+
+        echo "-------- SonarQube Analysis Completed --------"
+      '''
+    }
+  }
+}
     stage("Artifact Store") {
       steps {
         sh """
