@@ -12,7 +12,7 @@ pipeline {
   stages {
     stage("Checkout") {
       steps {
-        checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/shivagande26/DataStore.git']])
+        checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/rashmiranjanDevOps/student-datastore-ci-cd.git']])
       }
     }
     stage("Maven Build") {
@@ -37,7 +37,7 @@ pipeline {
       steps {
         sh """
           echo "-------- Pushing Artifacts To S3 --------"
-          aws s3 cp ./target/*.jar s3://datastore-artefact-store-jenkins-apps/
+          aws s3 cp ./target/*.jar s3://datastore-artefact-store-jenkins1/
           echo "-------- Pushing Artifacts To S3 Completed --------"
         """
       }
@@ -64,7 +64,7 @@ pipeline {
       steps{
         sh """
           echo "-------- Tagging Docker Image --------"
-          docker tag datastore:"${App_Version}" 8072388539/datastore:"${App_Version}"
+          docker tag datastore:"${App_Version}" rashmiranjandevops/datastore:"${App_Version}"
           echo "-------- Tagging Docker Image Completed."
         """
       }
