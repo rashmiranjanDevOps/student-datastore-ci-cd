@@ -51,6 +51,8 @@ Slack Notification 🚀
 | ☁️ AWS EC2 | Infrastructure |
 | 💬 Slack | Notifications |
 
+---
+
 ### 🔄 Pipeline Flow
 
 1️⃣ Code pushed to GitHub  
@@ -62,6 +64,8 @@ Slack Notification 🚀
 7️⃣ Kubernetes YAML updated  
 8️⃣ ArgoCD deploys application  
 9️⃣ Slack sends notification
+
+---
 
 ### 🔢 Versioning
 
@@ -83,9 +87,10 @@ Stored securely in Jenkins:
 - 🔑 SonarQube token  
 - 🔑 Slack token
 
+---
+
 ### 📂 Project Structure
 
-```text
 student-datastore-ci-cd/
 ├── Jenkinsfile
 ├── Dockerfile
@@ -95,6 +100,8 @@ student-datastore-ci-cd/
 datastore-k8s-argocd/
 └── datastore-deploy/
     └── datastore-deploy.yaml
+
+---
 
 ### ✅ Result
 
