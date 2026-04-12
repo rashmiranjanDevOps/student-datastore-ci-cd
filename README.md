@@ -69,3 +69,34 @@ Slack Notification 🚀
 
 ```bash
 APP_VERSION = v${BUILD_NUMBER}
+
+📌 Example:
+Build #1 → v1
+Build #2 → v2
+🔐 Credentials
+
+Stored securely in Jenkins:
+
+🔑 DockerHub credentials
+🔑 GitHub token
+🔑 SonarQube token
+🔑 Slack token
+📂 Project Structure
+student-datastore-ci-cd/
+├── Jenkinsfile
+├── Dockerfile
+├── pom.xml
+└── src/
+
+datastore-k8s-argocd/
+└── datastore-deploy/
+    └── datastore-deploy.yaml
+✅ Result
+
+✔ Automated CI/CD pipeline
+✔ GitOps-based deployment
+✔ Secure and scalable workflow
+
+👨‍💻 Author
+
+Rashmi Ranjan Panigrahy
