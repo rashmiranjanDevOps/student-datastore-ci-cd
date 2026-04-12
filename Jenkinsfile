@@ -147,31 +147,31 @@ pipeline {
 
   post {
     success {
-        slackSend channel: '#alerting',
+        slackSend channel: '#datastore-app',
                   color: 'good',
                   message: "✔️ SUCCESS: `${env.JOB_NAME} #${env.BUILD_NUMBER}` completed successfully.\nVersion: ${env.APP_VERSION}"
     }
 
     failure {
-        slackSend channel: '#alerting',
+        slackSend channel: '#datastore-app',
                   color: 'danger',
                   message: "❌ FAILURE: `${env.JOB_NAME} #${env.BUILD_NUMBER}` failed.\nCheck console output: ${env.BUILD_URL}"
     }
 
     unstable {
-        slackSend channel: '#alerting',
+        slackSend channel: '#datastore-app',
                   color: 'warning',
                   message: "⚠️ UNSTABLE: `${env.JOB_NAME} #${env.BUILD_NUMBER}` returned unstable status."
     }
 
     aborted {
-        slackSend channel: '#alerting',
+        slackSend channel: '#datastore-app',
                   color: '#808080',
                   message: "⛔ ABORTED: `${env.JOB_NAME} #${env.BUILD_NUMBER}` was aborted."
     }
 
     always {
-        slackSend channel: '#alerting',
+        slackSend channel: '#datastore-app',
                   color: '#439FE0',
                   message: "ℹ️ Build finished: `${env.JOB_NAME} #${env.BUILD_NUMBER}`\nVersion: ${env.APP_VERSION}"
     }
