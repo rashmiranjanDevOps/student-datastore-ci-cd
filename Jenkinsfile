@@ -127,6 +127,13 @@ pipeline {
       }
     }
 
+    stage("Deployment Approval") {
+  steps {
+    input message: "Do you want to deploy version ${APP_VERSION}?", ok: "Yes, Deploy!"
+  }
+}
+
+    
     stage("Triggering Deployment") {
       steps {
         build job: "KubernetesDeployment",
