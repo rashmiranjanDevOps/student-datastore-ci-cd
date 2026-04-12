@@ -19,7 +19,6 @@ This project implements a simple **end-to-end CI/CD pipeline** using Jenkins and
 
 ### 🧱 Architecture
 
-```text
 GitHub
    ↓
 Jenkins (CI)
