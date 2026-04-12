@@ -90,7 +90,7 @@ Stored securely in Jenkins:
 ---
 
 ### 📂 Project Structure
----text
+
 student-datastore-ci-cd/
 ├── Jenkinsfile
 ├── Dockerfile
