@@ -17,7 +17,7 @@ This project implements a simple **end-to-end CI/CD pipeline** using Jenkins and
 
 ---
 
-## 🧱 Architecture
+### 🧱 Architecture
 
 ```text
 GitHub
@@ -39,10 +39,7 @@ Slack Notification 🚀
 
 ---
 
-# 🛠️ 2. Tools Used Section
-
-```md
-## 🛠️ Tools Used
+### 🛠️ Tools Used
 
 | Tool | Purpose |
 |------|--------|
@@ -55,7 +52,7 @@ Slack Notification 🚀
 | ☁️ AWS EC2 | Infrastructure |
 | 💬 Slack | Notifications |
 
-## 🔄 Pipeline Flow
+### 🔄 Pipeline Flow
 
 1️⃣ Code pushed to GitHub  
 2️⃣ Jenkins pipeline starts  
@@ -67,9 +64,8 @@ Slack Notification 🚀
 8️⃣ ArgoCD deploys application  
 9️⃣ Slack sends notification
 
-## 🔢 Versioning
+### 🔢 Versioning
 
-```bash
 APP_VERSION = v${BUILD_NUMBER}
 
 📌 Example
@@ -79,10 +75,7 @@ Build #2 → v2
 
 ---
 
-# 🔐 5. Credentials Section
-
-```md
-## 🔐 Credentials
+### 🔐 Credentials
 
 Stored securely in Jenkins:
 
@@ -91,7 +84,7 @@ Stored securely in Jenkins:
 - 🔑 SonarQube token  
 - 🔑 Slack token
 
-## 📂 Project Structure
+### 📂 Project Structure
 
 ```text
 student-datastore-ci-cd/
@@ -104,13 +97,7 @@ datastore-k8s-argocd/
 └── datastore-deploy/
     └── datastore-deploy.yaml
 
-
----
-
-# ✅ 7. Result Section
-
-```md
-## ✅ Result
+### ✅ Result
 
 ✔ Automated CI/CD pipeline  
 ✔ GitOps-based deployment  
